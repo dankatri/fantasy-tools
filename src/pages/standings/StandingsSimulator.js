@@ -45,7 +45,7 @@ const Home = () => {
     }
   }, [getIdTokenClaims, isAuthenticated]);
 
-  const fetchRankings = async (leagueId, seasonId = '2023') => {
+  const fetchRankings = async (leagueId, seasonId = new Date().getFullYear().toString()) => {
     setLoading(true);
     try {
       if (leagueId && seasonId) {
